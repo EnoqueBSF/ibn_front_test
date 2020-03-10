@@ -6,10 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile
     image: nodejs
-    container_name: nodejs
+    container_name: ibn_front
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "3000:3000"
 
     networks:
       - app-network
