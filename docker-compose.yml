@@ -42,6 +42,13 @@ services:
     command: certonly --webroot --webroot-path=/var/www/html --email enoquebelmiro@hotmail.com --agree-tos --no-eff-email --force-renewal -d sejaibn.org.br  -d www.sejaibn.org.br
 
 volumes:
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/site_ibn/dhparam
+      o: bind
+
   certbot-etc:
   certbot-var:
   web-root:
@@ -49,13 +56,6 @@ volumes:
     driver_opts:
       type: none
       device: /var/www/IBN_Front
-      o: bind
-
-  dhparam:
-    driver: local
-    driver_opts:
-      type: none
-      device: /home/site_ibn/dhparam
       o: bind
 
 networks:
