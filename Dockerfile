@@ -7,7 +7,7 @@ WORKDIR /home/node/app
 
 COPY package*.json ./
 
-RUN npm install --global yarn
+RUN npm install yarn
 
 RUN yarn
 
