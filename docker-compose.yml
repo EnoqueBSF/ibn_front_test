@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  ibn-frontend:
+  nodejs:
     build:
       context: .
       dockerfile: Dockerfile
     image: nodejs
-    container_name: ibn-frontend
+    container_name: nodejs
     restart: unless-stopped
 
     networks:
@@ -26,7 +26,7 @@ services:
       - certbot-var:/var/lib/letsencrypt
       - dhparam:/etc/ssl/certs
     depends_on:
-      - ibn-frontend
+      - nodejs
     networks:
       - app-network
 
