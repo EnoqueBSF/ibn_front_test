@@ -5,7 +5,7 @@ server {
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name example.com www.example.com;
+        server_name sejaibn.org.br www.sejaibn.org.br;
 
         location / {
                 proxy_pass http://ibn_front:3000;
