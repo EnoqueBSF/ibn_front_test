@@ -8,8 +8,6 @@ services:
     image: nodejs
     container_name: ibn_front
     restart: unless-stopped
-    ports:
-      - "3000:3000"
 
     networks:
       - app-network
