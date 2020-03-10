@@ -48,14 +48,14 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/
+      device: /home/site_ibn/dhparam
       o: bind
 
   dhparam:
     driver: local
     driver_opts:
       type: none
-      device: /home/site_ibn/dhparam/
+      device: /home/site_ibn/dhparam
       o: bind
 
 networks:
