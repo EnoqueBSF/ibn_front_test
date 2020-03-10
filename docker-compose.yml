@@ -18,6 +18,7 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - web-root:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
@@ -35,6 +36,7 @@ services:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - web-root:/var/www/html
+      - dhparam:/etc/ssl/certs
     depends_on:
       - webserver
     command: certonly --webroot --webroot-path=/var/www/html --email enoquebelmiro@hotmail.com --agree-tos --no-eff-email --force-renewal -d sejaibn.org.br  -d www.sejaibn.org.br
@@ -47,6 +49,13 @@ volumes:
     driver_opts:
       type: none
       device: /home/
+      o: bind
+
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/dhparam/
       o: bind
 
 networks:
