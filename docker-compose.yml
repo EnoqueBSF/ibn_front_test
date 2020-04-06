@@ -4,4 +4,4 @@ ibn_front_test:
   volumes:
     - .:/frontend-ibn
   ports:
-    - "3000:3002"
+    - "3002:3000"
