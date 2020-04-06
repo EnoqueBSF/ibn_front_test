@@ -1,7 +1,12 @@
-ibn_front:
-  build: .
-  image: nodejs
-  container_name: ibn_front
-  restart: unless-stopped
-  ports:
-    - "3000:3000"
+version: '3'
+
+services:
+  ibn_front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: ibn_front
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
