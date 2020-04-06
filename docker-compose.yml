@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.3'
 
 services:
   ibn_front:
@@ -9,4 +9,4 @@ services:
     container_name: ibn_front
     restart: unless-stopped
     ports:
-      - "3002:3002"
+      - 3000:3000
