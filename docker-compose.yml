@@ -1,5 +1,3 @@
-version: '3'
-
 ibn_front:
   build:
     context: .
