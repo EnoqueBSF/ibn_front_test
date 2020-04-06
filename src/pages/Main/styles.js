@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+`;
 
 export const Box = styled.div``;
 
@@ -101,5 +105,29 @@ export const Box2 = styled.div`
     line-height: 20px;
     font-weight: 600;
     font-family: Poppins, sans-serif;
+  }
+`;
+
+export const IbnTV = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1% 0;
+  background-color: #00516f;
+  border-radius: 0 0 50px 50px;
+
+  p {
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-weight: 900;
+  }
+
+  a {
+    background-color: #0b8cbb;
+    border-radius: 10px;
+    padding: 0.5% 2%;
+    color: #fff;
+    font-weight: 500;
   }
 `;

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
 export const Start = styled.nav`
   display: flex;
   align-items: center;
@@ -10,7 +9,9 @@ export const Start = styled.nav`
   background: #00516f;
   padding: 0 8% 0 8%;
 
-  a {
+  p {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
     font-size: 13px;
     color: #fff;
     padding-left: 10px;
@@ -20,19 +21,18 @@ export const Finish = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 130px;
+  height: 100px;
   width: 100%;
-  background: #fff;
+  background: #101010;
   padding: 0 8% 0 8%;
 
   a {
     font-size: 15px;
-    color: #4d4d4d;
-    padding-left: 10px;
+    color: #f5f5f5;
+    padding: 0 15px;
   }
 
   nav {
-    margin-right: -170px;
   }
 
   div {
@@ -50,14 +50,17 @@ export const Finish = styled.div`
 
     button {
       border: 0;
-      width: 50px;
-      height: 40px;
+      padding: 10px 25px 10px 25px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #f7a230;
-      border: 1px solid #f7a230;
-      border-radius: 0 50px 50px 0;
+      background: none;
+      border: 2px solid #0c93c5;
+      border-radius: 50px;
+
+      p {
+        color: #f5f5f5;
+      }
     }
   }
 `;
