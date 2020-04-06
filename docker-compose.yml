@@ -1,7 +1,5 @@
 ibn_front:
-  build:
-    context: .
-    dockerfile: Dockerfile
+  build: .
   image: nodejs
   container_name: ibn_front
   restart: unless-stopped
