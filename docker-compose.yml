@@ -1,6 +1,5 @@
 ibn_front_test:
   build: .
-  command: yarn sucrase-node src/server.js
   restart: unless-stopped
   volumes:
     - .:/frontend-ibn
